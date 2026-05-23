@@ -2,9 +2,11 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kinderwald Parent Survey</title>
+
   <style>
+
     body {
       font-family: Arial, sans-serif;
       background: #f6f2e9;
@@ -14,7 +16,7 @@
     }
 
     .container {
-      max-width: 850px;
+      max-width: 900px;
       margin: 40px auto;
       background: #fff;
       padding: 30px;
@@ -30,19 +32,19 @@
 
     .subtitle {
       text-align: center;
-      margin-bottom: 30px;
       color: #777;
+      margin-bottom: 30px;
     }
 
     .section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .section h2 {
       color: #7b5e3b;
       border-bottom: 2px solid #e8dcc5;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
     }
 
     label {
@@ -51,42 +53,47 @@
       font-weight: bold;
     }
 
-    input, textarea, select {
+    input,
+    textarea,
+    select {
       width: 100%;
       padding: 12px;
-      border: 1px solid #ddd;
       border-radius: 10px;
+      border: 1px solid #ddd;
       margin-bottom: 18px;
       font-size: 15px;
       box-sizing: border-box;
     }
 
     textarea {
-      resize: vertical;
       min-height: 100px;
+      resize: vertical;
     }
 
     .rating {
       display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
       flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
     }
 
     .rating label {
       font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
 
     button {
       background: #5b7c4d;
       color: white;
       border: none;
-      padding: 14px 24px;
+      padding: 14px 28px;
       border-radius: 12px;
       font-size: 16px;
       cursor: pointer;
       display: block;
-      margin: 0 auto;
+      margin: auto;
       transition: 0.3s;
     }
 
@@ -99,7 +106,7 @@
       text-align: center;
       margin-top: 30px;
       color: #5b7c4d;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
     }
 
@@ -109,169 +116,222 @@
       background: #faf7f1;
       padding: 20px;
       border-radius: 15px;
-      margin-top: 40px;
     }
 
-    .english {
-      margin-bottom: 40px;
-    }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Kinderwald Kindergarten</h1>
-    <p class="subtitle">Parent Feedback Survey | استبيان أولياء الأمور</p>
+<div class="container">
 
-    <form id="surveyForm">
+  <h1>Kinderwald Kindergarten</h1>
+  <p class="subtitle">
+    Parent Feedback Survey | استبيان أولياء الأمور
+  </p>
 
-      <div class="english section">
-        <h2>English Survey</h2>
+  <form id="surveyForm">
 
-        <label>Parent Name \(Optional\)</label>
-        <input type="text" placeholder="Enter your name" />
+    <!-- ENGLISH -->
 
-        <label>Child Name (Optional)</label>
-        <input type="text" placeholder="Enter your child's name" />
+    <div class="section english">
 
-        <label>Select Class *</label>
-        <select required>
-          <option value="">Choose a class</option>
-          <option>Squirrels</option>
-          <option>Pandas</option>
-          <option>Koalas</option>
-          <option>Bunnies</option>
-        </select>
+      <h2>English Survey</h2>
 
-        <label>How satisfied are you with your child’s experience at Kinderwald?</label>
-        <div class="rating">
-          <label><input type="radio" name="satisfaction" /> Excellent</label>
-          <label><input type="radio" name="satisfaction" /> Good</label>
-          <label><input type="radio" name="satisfaction" /> Average</label>
-          <label><input type="radio" name="satisfaction" /> Needs Improvement</label>
-        </div>
-        <textarea placeholder="If you chose 'Needs Improvement', please tell us more 💛"></textarea>
+      <label>Parent Name (Optional)</label>
+      <input type="text" name="parentName" placeholder="Enter your name">
 
-        <div class="rating">
-        </div>
+      <label>Child Name (Optional)</label>
+      <input type="text" name="childName" placeholder="Enter your child's name">
 
-        <label>What do you like most? 💛</label>
-        <textarea placeholder="Write your feedback"></textarea>
+      <label>Select Class *</label>
+      <select name="className" required>
+        <option value="">Choose a class</option>
+        <option>Squirrels</option>
+        <option>Pandas</option>
+        <option>Koalas</option>
+        <option>Bunnies</option>
+      </select>
 
-        <label>Do you feel your child is learning and developing well?</label>
-        <select>
-          <option>Yes</option>
-          <option>Sometimes</option>
-          <option>No</option>
-        </select>
+      <label>How satisfied are you with your child’s experience at Kinderwald?</label>
 
-        <label>What can we improve? ✨</label>
-        <textarea placeholder="Share your thoughts"></textarea>
-
-        <label>Would you be interested in adding second language?</label>
-        <div class="rating">
-          <label><input type="radio" name="language_program" /> German</label>
-          <label><input type="radio" name="language_program" /> French</label>
-          <label><input type="radio" name="language_program" /> No</label>
-        </div>
-
-        <label>How easy to find using the Bloomz app?</label>
-        <div class="rating">
-          <label><input type="radio" name="bloomz" /> Excellent</label>
-          <label><input type="radio" name="bloomz" /> Good</label>
-          <label><input type="radio" name="bloomz" /> Average</label>
-          <label><input type="radio" name="bloomz" /> Needs Improvement</label>
-        </div>
-        <textarea placeholder="If you chose 'Needs Improvement', please share your thoughts ✨"></textarea>
-
-        <div class="rating">
-        </div>
+      <div class="rating">
+        <label><input type="radio" name="satisfaction" value="Excellent"> Excellent</label>
+        <label><input type="radio" name="satisfaction" value="Good"> Good</label>
+        <label><input type="radio" name="satisfaction" value="Average"> Average</label>
+        <label><input type="radio" name="satisfaction" value="Needs Improvement"> Needs Improvement</label>
       </div>
 
-      <div class="arabic section">
-        <h2>الاستبيان باللغة العربية</h2>
+      <textarea
+        name="needsImprovement"
+        placeholder="If you chose Needs Improvement, please tell us more 💛"></textarea>
 
-        <label>اسم ولي الأمر \(اختياري\)</label>
-        <input type="text" placeholder="اكتب الاسم" />
+      <label>What do you like most? 💛</label>
 
-        <label>اسم الطفل (اختياري)</label>
-        <input type="text" placeholder="اكتب اسم الطفل" />
+      <textarea
+        name="likeMost"
+        placeholder="Write your feedback"></textarea>
 
-        <label>اختيار الفصل *</label>
-        <select required>
-          <option value="">اختر الفصل</option>
-          <option>Squirrels</option>
-          <option>Pandas</option>
-          <option>Koalas</option>
-          <option>Bunnies</option>
-        </select>
+      <label>Do you feel your child is learning and developing well?</label>
 
-        <label>ما مدى رضاكم عن تجربة طفلكم في الحضانة؟</label>
-        <div class="rating">
-          <label><input type="radio" name="arabic_satisfaction" /> ممتاز</label>
-          <label><input type="radio" name="arabic_satisfaction" /> جيد</label>
-          <label><input type="radio" name="arabic_satisfaction" /> متوسط</label>
-          <label><input type="radio" name="arabic_satisfaction" /> يحتاج تحسين</label>
-        </div>
-        <textarea placeholder="إذا اخترت يحتاج تحسين، شاركنا رأيك 💛"></textarea>
+      <select name="learningProgress">
+        <option>Yes</option>
+        <option>Sometimes</option>
+        <option>No</option>
+      </select>
 
-        <div class="rating">
-        </div>
+      <label>What can we improve? ✨</label>
 
-        <label>ما أكثر شيء يعجبكم؟ 💛</label>
-        <textarea placeholder="اكتب رأيك"></textarea>
+      <textarea
+        name="improve"
+        placeholder="Share your thoughts"></textarea>
 
-        <label>هل تشعر أن طفلك يتعلم ويتطور بشكل جيد؟</label>
-        <select>
-          <option>نعم</option>
-          <option>إلى حد ما</option>
-          <option>لا</option>
-        </select>
+      <label>Would you be interested in adding a second language? 🇩🇪🇫🇷</label>
 
-        <label>ما الذي يمكننا تحسينه؟ ✨</label>
-        <textarea placeholder="شاركنا رأيك"></textarea>
-
-        <label>هل تهتمون بإضافة ثانية ؟ ✨</label>
-        <div class="rating">
-          <label><input type="radio" name="arabic_language_program" /> الألمانية </label>
-          <label><input type="radio" name="arabic_language_program" /> الفرنسية </label>
-          <label><input type="radio" name="arabic_language_program" /> لا</label>
-        </div>
-
-        <label>ما مدى رضاكم عن التواصل من خلال تطبيق Bloomz؟</label>
-        <div class="rating">
-          <label><input type="radio" name="arabic_bloomz" /> ممتاز</label>
-          <label><input type="radio" name="arabic_bloomz" /> جيد</label>
-          <label><input type="radio" name="arabic_bloomz" /> متوسط</label>
-          <label><input type="radio" name="arabic_bloomz" /> يحتاج تحسين</label>
-        </div>
-        <textarea placeholder="إذا اخترت يحتاج تحسين، أخبرنا بما يمكن تطويره ✨"></textarea>
-
-        <div class="rating">
-        </div>
+      <div class="rating">
+        <label><input type="radio" name="secondLanguage" value="German"> German</label>
+        <label><input type="radio" name="secondLanguage" value="French"> French</label>
+        <label><input type="radio" name="secondLanguage" value="No"> No</label>
       </div>
 
-      <button type="submit">Submit | إرسال</button>
+      <label>How satisfied are you with communication through the Bloomz app?</label>
 
-      <div class="thankyou" id="thankyouMessage">
-        Thank you for your feedback 💛<br>
-        شكرًا لمشاركتكم رأيكم 💛
+      <div class="rating">
+        <label><input type="radio" name="bloomz" value="Excellent"> Excellent</label>
+        <label><input type="radio" name="bloomz" value="Good"> Good</label>
+        <label><input type="radio" name="bloomz" value="Average"> Average</label>
+        <label><input type="radio" name="bloomz" value="Needs Improvement"> Needs Improvement</label>
       </div>
 
-    </form>
-  </div>
+      <textarea
+        name="bloomzNotes"
+        placeholder="If you chose Needs Improvement, please share your thoughts ✨"></textarea>
 
-  <script>
-    const form = document.getElementById('surveyForm');
-    const thankyou = document.getElementById('thankyouMessage');
+    </div>
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      thankyou.style.display = 'block';
-      form.reset();
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    });
-  </script>
+    <!-- ARABIC -->
+
+    <div class="section arabic">
+
+      <h2>الاستبيان باللغة العربية</h2>
+
+      <label>اسم ولي الأمر (اختياري)</label>
+      <input type="text" name="arabicParentName" placeholder="اكتب الاسم">
+
+      <label>اسم الطفل (اختياري)</label>
+      <input type="text" name="arabicChildName" placeholder="اكتب اسم الطفل">
+
+      <label>اختيار الفصل *</label>
+
+      <select name="arabicClassName" required>
+        <option value="">اختر الفصل</option>
+        <option>Squirrels</option>
+        <option>Pandas</option>
+        <option>Koalas</option>
+        <option>Bunnies</option>
+      </select>
+
+      <label>ما مدى رضاكم عن تجربة طفلكم في الحضانة؟</label>
+
+      <div class="rating">
+        <label><input type="radio" name="arabicSatisfaction" value="ممتاز"> ممتاز</label>
+        <label><input type="radio" name="arabicSatisfaction" value="جيد"> جيد</label>
+        <label><input type="radio" name="arabicSatisfaction" value="متوسط"> متوسط</label>
+        <label><input type="radio" name="arabicSatisfaction" value="يحتاج تحسين"> يحتاج تحسين</label>
+      </div>
+
+      <textarea
+        name="arabicNeedsImprovement"
+        placeholder="إذا اخترت يحتاج تحسين، شاركنا رأيك 💛"></textarea>
+
+      <label>ما أكثر شيء يعجبكم؟ 💛</label>
+
+      <textarea
+        name="arabicLikeMost"
+        placeholder="اكتب رأيك"></textarea>
+
+      <label>هل تشعر أن طفلك يتعلم ويتطور بشكل جيد؟</label>
+
+      <select name="arabicLearningProgress">
+        <option>نعم</option>
+        <option>إلى حد ما</option>
+        <option>لا</option>
+      </select>
+
+      <label>ما الذي يمكننا تحسينه؟ ✨</label>
+
+      <textarea
+        name="arabicImprove"
+        placeholder="شاركنا رأيك"></textarea>
+
+      <label>هل تهتمون بإضافة لغة ثانية؟ 🇩🇪🇫🇷</label>
+
+      <div class="rating">
+        <label><input type="radio" name="arabicSecondLanguage" value="الألمانية"> الألمانية</label>
+        <label><input type="radio" name="arabicSecondLanguage" value="الفرنسية"> الفرنسية</label>
+        <label><input type="radio" name="arabicSecondLanguage" value="لا"> لا</label>
+      </div>
+
+      <label>ما مدى رضاكم عن التواصل من خلال تطبيق Bloomz؟</label>
+
+      <div class="rating">
+        <label><input type="radio" name="arabicBloomz" value="ممتاز"> ممتاز</label>
+        <label><input type="radio" name="arabicBloomz" value="جيد"> جيد</label>
+        <label><input type="radio" name="arabicBloomz" value="متوسط"> متوسط</label>
+        <label><input type="radio" name="arabicBloomz" value="يحتاج تحسين"> يحتاج تحسين</label>
+      </div>
+
+      <textarea
+        name="arabicBloomzNotes"
+        placeholder="إذا اخترت يحتاج تحسين، أخبرنا بما يمكن تطويره ✨"></textarea>
+
+    </div>
+
+    <button type="submit">
+      Submit | إرسال
+    </button>
+
+    <div class="thankyou" id="thankyouMessage">
+      Thank you for your feedback 💛<br>
+      شكرًا لمشاركتكم رأيكم 💛
+    </div>
+
+  </form>
+
+</div>
+
+<script>
+
+const form = document.getElementById('surveyForm');
+
+form.addEventListener('submit', async function(e) {
+
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const data = Object.fromEntries(formData.entries());
+
+  await fetch("PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE", {
+
+    method: "POST",
+
+    body: JSON.stringify(data)
+
+  });
+
+  document.getElementById('thankyouMessage').style.display = 'block';
+
+  form.reset();
+
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
+
+});
+
+</script>
 
 </body>
 </html>

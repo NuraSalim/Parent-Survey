@@ -145,7 +145,7 @@
       <input type="text" name="childName" placeholder="Enter your child's name">
 
       <label>Select Class *</label>
-      <select name="className" required>
+      <select name="className">
         <option value="">Choose a class</option>
         <option>Squirrels</option>
         <option>Pandas</option>
@@ -223,7 +223,7 @@
 
       <label>اختيار الفصل *</label>
 
-      <select name="arabicClassName" required>
+      <select name="arabicClassName">
         <option value="">اختر الفصل</option>
         <option>Squirrels</option>
         <option>Pandas</option>
@@ -307,6 +307,22 @@ const form = document.getElementById('surveyForm');
 form.addEventListener('submit', async function(e) {
 
   e.preventDefault();
+
+  const englishClass =
+    document.querySelector('[name="className"]').value;
+
+  const arabicClass =
+    document.querySelector('[name="arabicClassName"]').value;
+
+  // Require only one class selection
+
+  if (!englishClass && !arabicClass) {
+
+    alert("Please select a class / برجاء اختيار الفصل");
+
+    return;
+  }
+
 
   const formData = new FormData(form);
 

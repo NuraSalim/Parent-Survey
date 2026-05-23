@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinderwald Parent Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f2e9;
+      margin: 0;
+      padding: 0;
+      color: #4a4a4a;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #5b7c4d;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #777;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      color: #7b5e3b;
+      border-bottom: 2px solid #e8dcc5;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .rating {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .rating label {
+      font-weight: normal;
+    }
+
+    button {
+      background: #5b7c4d;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #48653d;
+    }
+
+    .thankyou {
+      display: none;
+      text-align: center;
+      margin-top: 30px;
+      color: #5b7c4d;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .arabic {
+      direction: rtl;
+      text-align: right;
+      background: #faf7f1;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+
+    .english {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Kinderwald Kindergarten</h1>
+    <p class="subtitle">Parent Feedback Survey | استبيان أولياء الأمور</p>
+
+    <form id="surveyForm">
+
+      <div class="english section">
+        <h2>English Survey</h2>
+
+        <label>Parent Name \(Optional\)</label>
+        <input type="text" placeholder="Enter your name" />
+
+        <label>Child Name (Optional)</label>
+        <input type="text" placeholder="Enter your child's name" />
+
+        <label>Select Class *</label>
+        <select required>
+          <option value="">Choose a class</option>
+          <option>Squirrels</option>
+          <option>Pandas</option>
+          <option>Koalas</option>
+          <option>Bunnies</option>
+        </select>
+
+        <label>How satisfied are you with your child’s experience at Kinderwald?</label>
+        <div class="rating">
+          <label><input type="radio" name="satisfaction" /> Excellent</label>
+          <label><input type="radio" name="satisfaction" /> Good</label>
+          <label><input type="radio" name="satisfaction" /> Average</label>
+          <label><input type="radio" name="satisfaction" /> Needs Improvement</label>
+        </div>
+        <textarea placeholder="If you chose 'Needs Improvement', please tell us more 💛"></textarea>
+
+        <div class="rating">
+        </div>
+
+        <label>What do you like most? 💛</label>
+        <textarea placeholder="Write your feedback"></textarea>
+
+        <label>Do you feel your child is learning and developing well?</label>
+        <select>
+          <option>Yes</option>
+          <option>Sometimes</option>
+          <option>No</option>
+        </select>
+
+        <label>What can we improve? ✨</label>
+        <textarea placeholder="Share your thoughts"></textarea>
+
+        <label>How satisfied are you with our communication through the Bloomz app?</label>
+        <div class="rating">
+          <label><input type="radio" name="bloomz" /> Excellent</label>
+          <label><input type="radio" name="bloomz" /> Good</label>
+          <label><input type="radio" name="bloomz" /> Average</label>
+          <label><input type="radio" name="bloomz" /> Needs Improvement</label>
+        </div>
+        <textarea placeholder="If you chose 'Needs Improvement', please share your thoughts ✨"></textarea>
+
+        <div class="rating">
+        </div>
+      </div>
+
+      <div class="arabic section">
+        <h2>الاستبيان باللغة العربية</h2>
+
+        <label>اسم ولي الأمر \(اختياري\)</label>
+        <input type="text" placeholder="اكتب الاسم" />
+
+        <label>اسم الطفل (اختياري)</label>
+        <input type="text" placeholder="اكتب اسم الطفل" />
+
+        <label>اختيار الفصل *</label>
+        <select required>
+          <option value="">اختر الفصل</option>
+          <option>Squirrels</option>
+          <option>Pandas</option>
+          <option>Koalas</option>
+          <option>Bunnies</option>
+        </select>
+
+        <label>ما مدى رضاكم عن تجربة طفلكم في الحضانة؟</label>
+        <div class="rating">
+          <label><input type="radio" name="arabic_satisfaction" /> ممتاز</label>
+          <label><input type="radio" name="arabic_satisfaction" /> جيد</label>
+          <label><input type="radio" name="arabic_satisfaction" /> متوسط</label>
+          <label><input type="radio" name="arabic_satisfaction" /> يحتاج تحسين</label>
+        </div>
+        <textarea placeholder="إذا اخترت يحتاج تحسين، شاركنا رأيك 💛"></textarea>
+
+        <div class="rating">
+        </div>
+
+        <label>ما أكثر شيء يعجبكم؟ 💛</label>
+        <textarea placeholder="اكتب رأيك"></textarea>
+
+        <label>هل تشعر أن طفلك يتعلم ويتطور بشكل جيد؟</label>
+        <select>
+          <option>نعم</option>
+          <option>إلى حد ما</option>
+          <option>لا</option>
+        </select>
+
+        <label>ما الذي يمكننا تحسينه؟ ✨</label>
+        <textarea placeholder="شاركنا رأيك"></textarea>
+
+        <label>ما مدى رضاكم عن التواصل من خلال تطبيق Bloomz؟</label>
+        <div class="rating">
+          <label><input type="radio" name="arabic_bloomz" /> ممتاز</label>
+          <label><input type="radio" name="arabic_bloomz" /> جيد</label>
+          <label><input type="radio" name="arabic_bloomz" /> متوسط</label>
+          <label><input type="radio" name="arabic_bloomz" /> يحتاج تحسين</label>
+        </div>
+        <textarea placeholder="إذا اخترت يحتاج تحسين، أخبرنا بما يمكن تطويره ✨"></textarea>
+
+        <div class="rating">
+        </div>
+      </div>
+
+      <button type="submit">Submit | إرسال</button>
+
+      <div class="thankyou" id="thankyouMessage">
+        Thank you for your feedback 💛<br>
+        شكرًا لمشاركتكم رأيكم 💛
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('surveyForm');
+    const thankyou = document.getElementById('thankyouMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      thankyou.style.display = 'block';
+      form.reset();
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
